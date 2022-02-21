@@ -15,4 +15,19 @@
         <RepositoryType>Git</RepositoryType>
         <PackageId>CSharp_Repo</PackageId>
     </PropertyGroup>
+    <PropertyGroup Condition="'$(VersionSuffix)' != '' And '$(BuildNumber)' != ''">
+        <Version>$(VersionPrefix)-$(VersionSuffix)-$(BuildNumber)</Version>
+        <AssemblyVersion>$(VersionPrefix).$(BuildNumber)</AssemblyVersion>
+        <FileVersion>$(VersionPrefix).$(BuildNumber)</FileVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(VersionSuffix)' != '' And '$(BuildNumber)' == ''">
+        <Version>$(VersionPrefix)-$(VersionSuffix)</Version>
+        <AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
+        <FileVersion>$(VersionPrefix).0</FileVersion>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(VersionSuffix)' == ''">
+        <Version>$(VersionPrefix)</Version>
+        <AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
+        <FileVersion>$(VersionPrefix).0</FileVersion>
+    </PropertyGroup>
 </Project>
