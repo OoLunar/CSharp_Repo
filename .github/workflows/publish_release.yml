@@ -27,5 +27,7 @@ jobs:
         with:
           allowUpdates: true
           artifactErrorsFailBuild: true
-          artifacts: "build/*.nupkg"
+          artifacts: "build/*"
           token: ${{ secrets.GITHUB_TOKEN }}
+          omitBodyDuringUpdate: true
+          omitNameDuringUpdate: true
