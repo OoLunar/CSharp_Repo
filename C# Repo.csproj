@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <VersionPrefix>4.2.0</VersionPrefix>
+        <VersionPrefix>4.2.3</VersionPrefix>
         <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>C__Repo</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
